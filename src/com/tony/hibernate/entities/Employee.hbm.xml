@@ -4,6 +4,10 @@
 <!-- Generated 13-Feb-2016 10:14:58 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping package="com.tony.hibernate.entities">
     <class name="Employee" table="GG_EMPLOYEE">
+    
+    <!-- 
+    	<cache usage="read-wirte"/>
+     -->
         <id name="id" type="java.lang.Integer">
             <column name="ID" />
             <generator class="native" />

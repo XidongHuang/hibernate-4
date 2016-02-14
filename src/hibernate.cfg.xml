@@ -34,8 +34,21 @@
 
 		<property name="jdbc.batch_size">30</property>
 
+		<!-- Execute second cache -->
+		<property name="cache.use_second_level_cache">true</property>
+
+		<!-- Configure second cache -->
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory
+		</property>
+
+		<property name="current_session_context_class">thread</property>
+		<property name="cache.use_query_cache">true</property>
+
 		<mapping resource="com/tony/hibernate/entities/Department.hbm.xml" />
 		<mapping resource="com/tony/hibernate/entities/Employee.hbm.xml" />
-
+		
+		<class-cache usage="read-write" class="com.tony.hibernate.entities.Employee" />
+		<class-cache usage="read-write" class="com.tony.hibernate.entities.Department" />
+		<collection-cache usage="read-write" collection="com.tony.hibernate.entities.Department.emps" />
 	</session-factory>
 </hibernate-configuration>
