@@ -33,6 +33,12 @@ public class Employee {
 		this.salary = salary;
 	}
 
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", email=" + email + ", dept=" + dept
+				+ "]";
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -49,4 +55,14 @@ public class Employee {
 		this.dept = dept;
 	}
 
+	public Employee( float salary, String email, Department dept) {
+		super();
+		this.name = name;
+		this.salary = salary;
+		this.email = email;
+		this.dept = dept;
+	}
+
+	
+	
 }

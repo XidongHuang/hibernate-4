@@ -15,6 +15,11 @@ public class Department {
 		this.id = id;
 	}
 
+	@Override
+	public String toString() {
+		return "Department [id=" + id + ", name=" + name + ", emps=" + emps + "]";
+	}
+
 	public String getName() {
 		return name;
 	}
